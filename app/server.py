@@ -8,7 +8,7 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-model_file_url = 'https://drive.google.com/uc?authuser=0&id=1nhtElwx7Q7StAvd_jAgXR08bW6_nUg80&export=download'
+model_file_url = 'https://drive.google.com/uc?authuser=0&id=1FBJXTCvvUc_bhMSK6B6-BOgD98T0CXbT&export=download'
 model_file_name = 'model'
 classes = ['Hesperiidae',
 'Lycaenidae',
