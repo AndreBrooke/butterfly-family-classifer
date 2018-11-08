@@ -13,17 +13,17 @@ body {
     padding-right:50px;
     text-align: center;
     font-size: 14px;
+    font-family: sans-serif;
 }
 
 .title {
     font-size: 30px;
     margin-top: 1em;
-    margin-bottom: 1em;
     color: #262626;
 }
 
 .content {
-    margin-top: 10em;
+    margin-top: 5em;
 }
 
 .analyze {
@@ -40,6 +40,22 @@ body {
     padding: 10px;
     font-size: 13px;
 }
+
+.image-container {
+  width: 270;
+  display: inline-grid;
+}
+
+#example-label {
+  display: grid;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.instructions {
+  padding: 20;
+}
+
 
 button.choose-file-button {
   width: 200px;

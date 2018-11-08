@@ -8,8 +8,8 @@ RUN pip install -r requirements.txt
 
 COPY app app/
 
-RUN python app/server.py
+RUN python app/butterfly-family.py
 
 EXPOSE 5042
 
-CMD ["python", "app/server.py", "serve"]
+CMD ["python", "app/butterfly-family.py", "serve"]
