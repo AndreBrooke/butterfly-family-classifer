@@ -12,12 +12,12 @@ RUN pip install starlette uvicorn python-multipart aiohttp
 
 ADD model-weights.pth model-weights.pth
 
-ADD food-detector.py food-detector.py
+ADD butterfly-family-classifier.py butterfly-family-classifier.py
 
 # Run it once to trigger resnet download
-RUN python food-detector.py
+RUN python butterfly-family-classifier.py
 
 EXPOSE 8008
 
 # Start the server
-CMD ["python", "food-detector.py", "serve"]
+CMD ["python", "butterfly-family-classifier.py", "serve"]

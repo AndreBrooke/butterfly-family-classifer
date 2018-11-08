@@ -38,9 +38,14 @@ def encode(img):
 app = Starlette()
 
 path = Path("/tmp")
-classes = ['healthy', 'junk']
+classes = ['Hesperiidae',
+'Lycaenidae',
+'Nymphalidae',
+'Papilionidae',
+'Pieridae',
+'Riodinidae']
 data = ImageDataBunch.single_from_classes(path, classes, tfms=get_transforms(), size=224).normalize(imagenet_stats)
-learner = create_cnn(data, models.resnet50)
+learner = create_cnn(data, models.resnet34)
 learner.model.load_state_dict(
     torch.load("model-weights.pth", map_location="cpu")
 )
@@ -85,8 +90,8 @@ def predict_image_from_bytes(bytes):
 def form(request):
     return HTMLResponse(
         """
-        <h1>Healthy Or Not !</h1>
-        <p>Find out if the food is healthy or not. Upload image or specify URL.</p><br>
+        <h1>Butterfly Family Classifier</h1>
+        <p>Find out what family a butterfly belongs to. Upload image or specify URL.</p><br>
         <form action="/upload" method="post" enctype="multipart/form-data">
             <u>Select image to upload:</u><br><p>
             1. <input type="file" name="file"><br><p>
